@@ -8,13 +8,6 @@ const FrameOnePage = () => {
       <Column className="bg-gradient  flex flex-col font-actor items-center justify-start mx-[auto] w-[100%]">
         <Column className="bg-gradient1  flex flex-col items-center justify-start md:p-[33px] p-[48px] sm:px-[15px] sm:py-[25px] w-[100%]">
           <Column className="flex flex-col justify-start max-w-[882px] sm:mb-[20px] md:mb-[26px] mb-[39px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
-            <Text
-              className="sm:ml-[260px] md:ml-[336px] ml-[489px] not-italic text-gray_100 tracking-ls024 md:tracking-ls1 sm:tracking-ls1 w-[auto]"
-              as="h3"
-              variant="h3"
-            >
-              Home About Portfolio{" "}
-            </Text>
             <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-between sm:mt-[4px] md:mt-[6px] mt-[9px] w-[100%]">
               <Img
                 src="images/img_avaar202221.png"
