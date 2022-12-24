@@ -1,49 +1,50 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 const PagerIndicator = ({
   className,
   activeCss,
   inactiveCss,
-  sliderRef,
   count,
-  activeIndex,
-  selectedWrapperCss = "",
-  unselectedWrapperCss = "",
+  activeIndex
 }) => {
-  const [slidesToShow, setSlidesToShow] = React.useState();
+  const { ref, inView } = useInView();
+  const [dataValue, setDataValue] = useState(0);
 
-  React.useEffect(() => {
-    const _slidesToShow = sliderRef?.current?.state?.itemsInSlide;
-    setSlidesToShow(_slidesToShow);
-  }, [sliderRef]);
+  useEffect(() =>{
+    if(inView){
+      setTimeout(() => {
+        if(dataValue < activeIndex){
+          setDataValue(dataValue + 1);
+        }
+      }, 200);
+    }else{
+      setDataValue(0);
+    }
+
+
+  },[inView, dataValue])
 
   return (
-    <div className={className}>
+    <div className={className} ref={ref}>
       {Array(count)
         .fill(0)
         .map((_, i) => {
           let isActive = false;
           if (
-            activeIndex >= i * slidesToShow &&
-            activeIndex < (i + 1) * slidesToShow
+            i+1 <= dataValue
           ) {
             isActive = true;
           }
 
           return (
-            <div
-              key={"indicator" + i}
-              className={`${
-                isActive ? selectedWrapperCss : unselectedWrapperCss
-              } `}
-            >
-              <span
+             <span
+                key= {`barformat_skill_card_entry`+i}
                 className={`${
                   isActive ? activeCss : inactiveCss
                 } slider-indicator`}
-                onClick={() => sliderRef?.current?.slideTo(i * slidesToShow)}
               />
-            </div>
           );
         })}
     </div>

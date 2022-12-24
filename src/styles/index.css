@@ -159,3 +159,18 @@ ul li a{
   flex-direction: column;
   list-style-type: none;
 }
+
+.MuiPaper-root-MuiMobileStepper-root{
+ background-color: transparent;
+ color: transparent;
+ width: 104px;
+}
+
+.MuiMobileStepper-dots {
+  width: 100%
+}
+
+.MuiMobileStepper-dot {
+  height: 12px;
+  width: 12px;
+}

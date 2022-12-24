@@ -9,6 +9,8 @@ import { Row } from "./Row";
 import { Stack } from "./Stack";
 import { Text } from "./Text";
 import { PagerIndicator } from "./PagerIndicator";
+import { CircularProgressBar } from "./ProgressBar/CircularProgressBar";
+import { Testimonial } from "./Testimonial";
 export {
   Column,
   Datepicker,
@@ -21,4 +23,6 @@ export {
   Stack,
   Text,
   PagerIndicator,
+  CircularProgressBar,
+  Testimonial
 };
