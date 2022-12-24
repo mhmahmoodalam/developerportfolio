@@ -11,14 +11,14 @@ const TestimonialBox = (props) => {
             <Column className="flex flex-col items-center justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] w-[100%]">
               <Column className="flex flex-col items-center justify-start md:p-[13px] p-[20px] sm:px-[15px] sm:py-[10px] rounded-radius10 w-[100%]">
                 <Text
-                  className="font-normal leading-[normal] not-italic text-center text-white_A700 md:tracking-ls1 sm:tracking-ls1 tracking-ls28000000000000003 w-[100%]"
+                  className="font-normal leading-[normal] not-italic text-center text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls28000000000000003 w-[100%]"
                   as="h4"
                   variant="h4"
                 >
                   {`"`+props.comment+`"`}
                 </Text>
               </Column>
-              <div className="bg-bluegray_100 h-[11px] sm:h-[6px] md:h-[8px] md:mt-[11px] mt-[16px] sm:mt-[8px] rounded-radius50 w-[11px] sm:w-[5px] md:w-[7px]"></div>
+              <div className="variant4 h-[11px] sm:h-[6px] md:h-[8px] md:mt-[11px] mt-[16px] sm:mt-[8px] rounded-radius50 w-[11px] sm:w-[5px] md:w-[7px]"></div>
               <Img
                 src={props.profilePic}
                 className="sm:h-[32px] md:h-[40px] h-[64px] max-w-[100%] md:mt-[11px] mt-[16px] sm:mt-[8px] sm:w-[32px] md:w-[40px] w-[64px] rounded-full"
@@ -26,19 +26,19 @@ const TestimonialBox = (props) => {
               />
               <Column className="flex flex-col items-center justify-start md:mt-[11px] mt-[16px] sm:mt-[8px] sm:mx-[0] md:p-[5px] p-[8px] sm:px-[0] sm:py-[4px] sm:w-[100%] w-[52%]">
                 <Text
-                  className="not-italic text-white_A700 md:tracking-ls1 sm:tracking-ls1 tracking-ls2 w-[auto]"
+                  className="not-italic text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls2 w-[auto]"
                   variant="h4"
                 >
                   {props.name}
                 </Text>
                 <Text
-                  className="mb-[4px] mt-[12px] sm:mt-[6px] md:mt-[8px] not-italic text-white_A700 md:tracking-ls1 sm:tracking-ls1 tracking-ls2 w-[auto]"
+                  className="mb-[4px] mt-[12px] sm:mt-[6px] md:mt-[8px] not-italic text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls2 w-[auto]"
                   variant="h5"
                 >
                   {props.role}
                 </Text>
                 <Text
-                  className=" not-italic text-white_A700 md:tracking-ls1 sm:tracking-ls1 tracking-ls2 w-[auto]"
+                  className=" not-italic text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls2 w-[auto]"
                   variant="h5"
                 >
                   {props.company}

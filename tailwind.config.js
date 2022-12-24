@@ -11,27 +11,31 @@ module.exports = {
       md: { min: "768px", max: "991px" },
     },
     extend: {
+      /*
+      
+      --primary:#0A2647",
+      --variant2: #144272;
+      --variant3: #205295;
+      --variant4: #2C74B3;
+      --primary_transparent:#07003066",
+      --secondary:#9aaeb9",
+      --primary_text:#ffffff",
+      */
       colors: {
-        gray_900_bf: "#070030bf",
-        gray_901: "#0c0031",
-        gray_900_66: "#06002f66",
-        bluegray_300: "#9aaeb9",
-        gray_900_dd: "#06002fdd",
-        gray_900: "#0f0743",
-        gray_900_60: "#0e064360",
-        bluegray_100: "#d9d9d9",
-        black_900_19: "#00000019",
-        white_A700: "#ffffff",
-        gray_100: "#f5f5f5",
-        gray_900_70: "#06002f70",
+        primary: "#0A2647",
+        variant2: "#144272",
+        variant3: "#205295",
+        variant4: "#2C74B3",
+        primary_transparent: "#0A264766",
+        secondary: "#9aaeb9",
+        primary_text: "#ffffff",
+        gray:"#636e74"
       },
       fontFamily: { actor: "Actor", roboto: "Roboto" },
       backgroundImage: {
-        gradient: "linear-gradient(180deg ,#06002f66,#070030bf)",
-        gradient1: "linear-gradient(180deg ,#0f0743,#070030bf)",
-        gradient2: "linear-gradient(180deg ,#06002fdd,#0e064360)",
-        gradient3: "linear-gradient(90deg ,#ffffff,#9aaeb9)",
-        gradient4: "linear-gradient(180deg ,#0f0743,#06002f70)",
+        gradient: "linear-gradient(60deg ,var(--primary),var(--variant2))",
+        gradient2: "linear-gradient(180deg ,var(--primary),var(--primary_transparent))",
+        gradient1: "linear-gradient(180deg ,var(--primary),var(--variant2))"
       },
       letterSpacing: {
         ls1: "1px",
