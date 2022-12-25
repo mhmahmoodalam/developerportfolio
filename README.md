@@ -139,16 +139,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that main-app wouldn’t be useful if you can’t customize it when you are ready for it.
-
 ## Syntax Highlighting in the Editor
 
 To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
@@ -221,3 +211,22 @@ Your environment will have everything you need to build a modern single-page Rea
 - Hassle-free updates for the above tools with a single dependency.
 
 The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://facebook.github.io/create-react-app/docs/available-scripts#npm-run-eject) and customize it, but then you will need to maintain this configuration.
+
+### Dark Mode
+
+Dark mode is supported using two style theme
+-- primary color : for dark mode
+-- primary_light color : for light mode
+
+
+### portfolio data
+
+One can use the \src\data\base_copy.js to populate the data base don which the portfolio can be extended as per user
+
+### future work
+
+null value and validation while rendering data
+
+allow save to pdfin better format
+
+fix mobile view
