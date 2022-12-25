@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -19,7 +18,6 @@ const updateThemeChange =(isLightMode) => {
         root.classList.remove(themeMode);
         root.classList.add(switchTheme);
         updateThemeChange(isLightMode);
-        console.log(" removed " + themeMode + " added"+switchTheme)
     },[isLightMode, themeMode ])
     return (
         <div className="dark-mode-switch" >
