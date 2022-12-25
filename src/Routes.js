@@ -1,7 +1,6 @@
 import React from "react";
 import FrameOne from "pages/FrameOne";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 const ProjectRoutes = () => {
   return (
@@ -9,7 +8,6 @@ const ProjectRoutes = () => {
       <Routes>
         <Route path="/" element={<FrameOne />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/dhiwise-dashboard" element={<Home />} />
       </Routes>
     </Router>
   );

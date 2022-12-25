@@ -29,13 +29,24 @@ module.exports = {
         primary_transparent: "#0A264766",
         secondary: "#9aaeb9",
         primary_text: "#ffffff",
-        gray:"#636e74"
+        gray:"#636e74",        
+        primary_light : "#82AAE3",
+        variant2_light: "#91D8E4",
+        variant3_light: "#BFEAF5",
+        variant4_light: "#EAFDFC",
+        primary_transparent_light: "#82AAE366", 
+        secondary_light: "#0071ae", 
+        primary_text_light: "#000000", 
+        gray_light: "#a9bfc7", 
       },
       fontFamily: { actor: "Actor", roboto: "Roboto" },
       backgroundImage: {
         gradient: "linear-gradient(60deg ,var(--primary),var(--variant2))",
         gradient2: "linear-gradient(180deg ,var(--primary),var(--primary_transparent))",
-        gradient1: "linear-gradient(180deg ,var(--primary),var(--variant2))"
+        gradient1: "linear-gradient(180deg ,var(--primary),var(--variant2))",
+        gradient_light: "linear-gradient(60deg ,var(--primary_light),var(--variant2_light))",
+        gradient2_light: "linear-gradient(180deg ,var(--primary_light),var(--primary_transparent_light))",
+        gradient1_light: "linear-gradient(180deg ,var(--primary_light),var(--variant2_light))"
       },
       letterSpacing: {
         ls1: "1px",

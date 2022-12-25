@@ -24,7 +24,7 @@ const PagerIndicator = ({
     }
 
 
-  },[inView, dataValue])
+  },[inView, dataValue, activeIndex])
 
   return (
     <div className={className} ref={ref}>

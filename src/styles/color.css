@@ -3,10 +3,19 @@
 --variant2: #144272;
 --variant3: #205295;
 --variant4: #2C74B3;
---primary_transparent:#07003066; 
+--primary_transparent:#0A264766; 
 --secondary:#9aaeb9; 
 --primary_text:#ffffff; 
 --gray:#636e74; 
+--primary_light : #82AAE3;
+--variant2_light: #91D8E4;
+--variant3_light: #BFEAF5;
+--variant4_light: #EAFDFC;
+--primary_transparent_light:#82AAE366; 
+--secondary_light:#0071ae; 
+--primary_text_light:#000000; 
+--gray_light:#a9bfc7; 
+
 }
 
 /*:root { 

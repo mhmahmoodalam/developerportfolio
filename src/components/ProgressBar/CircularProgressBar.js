@@ -32,7 +32,7 @@ const CircularProgressBar = ({
     }
 
 
-  },[inView, dataValue,progressValue])
+  },[inView, dataValue,progressValue, value])
 
   return (
     <div className={className} ref={ref}>
@@ -41,7 +41,7 @@ const CircularProgressBar = ({
             <CircularProgress variant="determinate" value={progressValue} size={circularProgressSize}/>
             <div className={`absolute bottom-0 left-0 bottom-0 right-0 flex items-center justify-center h-[100%] `}>
               <Text
-                className=" not-italic text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls256 "
+                className=" not-italic text-primary_text_light dark:text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls256 "
                 as={textVariant}
                 variant={textVariant}
               >
@@ -51,7 +51,7 @@ const CircularProgressBar = ({
           </div>
           {title && title.length > 0 &&
             <Text
-                className="leading-[normal] md:ml-[11px] ml-[16px] sm:mx-[0] not-italic text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls128 sm:w-[100%] w-[57%]"
+                className="leading-[normal] md:ml-[11px] ml-[16px] sm:mx-[0] not-italic text-primary_text_light dark:text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls128 sm:w-[100%] w-[57%]"
                 as={descriptionVariant}
                 variant={descriptionVariant}
             >

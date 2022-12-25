@@ -11,6 +11,7 @@ import { Text } from "./Text";
 import { PagerIndicator } from "./PagerIndicator";
 import { CircularProgressBar } from "./ProgressBar/CircularProgressBar";
 import { Testimonial } from "./Testimonial";
+import { DarkModeSwitch } from "./DarkMode"
 export {
   Column,
   Datepicker,
@@ -24,5 +25,6 @@ export {
   Text,
   PagerIndicator,
   CircularProgressBar,
-  Testimonial
+  Testimonial,
+  DarkModeSwitch
 };
