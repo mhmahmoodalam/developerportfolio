@@ -34,10 +34,11 @@ const ExpCompanyDetails = (props) => {
   }
 
   const ExpRolesDetails = (props) => {
-    const { responsibilities, align  } = props
-    const textAlign = align === "left" ? "text-left" : "text-right"
+    const { responsibilities, align } = props
+    const textAlign = align === "left" ? "text-left" : "text-right"    
+    const mobileviewClass = isMobile ? " border-l-2 border-dashed  dark:border-secondary_text border-secondary_light " : ""
     return (
-      <Column className="flex flex-col items-center md:ml-[11px] ml-[16px] sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[48%]">
+      <Column className={`flex flex-col items-center md:ml-[11px] ml-[16px] sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[48%] ` + mobileviewClass }>
           {
             responsibilities.map((resp,key) => {
               return (
@@ -69,21 +70,19 @@ const ExpDivider = () => {
   }
   
   const ExperienceView = ({exp, index}) => {
-    console.log( index, isMobile)
+    const webView = index % 2 === 0
+    ? <><ExpCompanyDetails {...exp} align={"right"} /><ExpDivider /><ExpRolesDetails {...exp} align={"left"} /></>
+    : <><ExpRolesDetails {...exp} align={"right"} /><ExpDivider /><ExpCompanyDetails {...exp} align={"left"}/></>
+    const mobileView = <> <ExpCompanyDetails {...exp} align={"left"}/><ExpRolesDetails {...exp} align={"left"} isMobileView={isMobile} /></>
+    
+    
    return (
     <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[100%]" key={`exp_row_`+index}>
        { 
-          !isMobile &&
-          index % 2 === 0
-          ? <><ExpCompanyDetails {...exp} align={"right"} /><ExpDivider /><ExpRolesDetails {...exp} align={"left"}/></>
-          : <><ExpRolesDetails {...exp} align={"right"} /><ExpDivider /><ExpCompanyDetails {...exp} align={"left"}/></>
+          !isMobile && webView
         }
         {
-          isMobile &&
-          <>
-            <ExpCompanyDetails {...exp} align={"left"}/>
-            <ExpRolesDetails {...exp} align={"left"}/>
-          </>
+          isMobile && mobileView
         }
     </Row>
    )
