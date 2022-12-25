@@ -2,7 +2,16 @@ const intro = {
     logo : "",
     firstName: "",
     lastName: "",
-    titleWithDescription : ""
+    titleWithDescription : "",
+    socialLinks:[
+        {
+            link: "",
+            iconClass: ""
+        },
+        {
+
+        }
+    ]
 }
 
 const description = {

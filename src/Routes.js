@@ -1,5 +1,5 @@
 import React from "react";
-import FrameOne from "pages/FrameOne";
+import FrameOne from "pages/Main";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "pages/NotFound";
 const ProjectRoutes = () => {

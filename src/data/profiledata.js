@@ -2,7 +2,21 @@ const intro = {
     logo : "images/img_avaar202221.png",
     firstName: "Muhammed",
     lastName: "Mahmood Alam.",
-    titleWithDescription : "Fullstack developer with expertise in microservices and distributed systems using Spring and React"
+    titleWithDescription : "Fullstack developer with expertise in microservices and distributed systems using Spring and React",
+    socialLinks:[
+        {
+            link: "https://github.com/mhmahmoodalam",
+            iconClass: "fab fa-github"
+        },
+        {
+            link: "https://www.linkedin.com/in/mhmahmoodalam",
+            iconClass: "fab fa-linkedin"
+        },
+        {
+            link: "https://www.hackerrank.com/mhmahmoodalam",
+            iconClass: "fab fa-hackerrank"
+        }
+    ]
 }
 
 const description = {

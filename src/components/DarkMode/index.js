@@ -3,40 +3,32 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 const updateThemeChange =(isLightMode) => {   
-    if (isLightMode) {
-        
-         // document.documentElement.classList.add('dark');
+    if (isLightMode) {        
           localStorage.setItem('color-theme', 'light');
       } else {
-         // document.documentElement.classList.remove('dark');
           localStorage.setItem('color-theme', 'dark');
       }  
   }
   
   const DarkModeSwitch = (props) => {
     const themeMode = localStorage.getItem('color-theme') || 'light'
-    const colorTheme = themeMode === "dark" ? "light" : "dark";
-    const [isLightMode, setIsLightMode] = useState(themeMode === 'light')
+    const [isLightMode, setIsLightMode] = useState(themeMode === 'light')    
     useEffect(() => {
-        const root = window.document.documentElement;
-        root.classList.remove(colorTheme);
-        root.classList.add(themeMode);
+        const root = window.document.documentElement;        
+        const switchTheme = isLightMode ? "light" : "dark";
+        root.classList.remove(themeMode);
+        root.classList.add(switchTheme);
         updateThemeChange(isLightMode);
-    })
-    useEffect(() => {
-        const root = window.document.documentElement;
-        root.classList.remove(colorTheme);
-        root.classList.add(themeMode);
-        updateThemeChange(isLightMode);
-    },[isLightMode, colorTheme,themeMode ])
+        console.log(" removed " + themeMode + " added"+switchTheme)
+    },[isLightMode, themeMode ])
     return (
         <div className="dark-mode-switch" >
             <button
                 type="button"
                 onClick={() =>setIsLightMode(!isLightMode)}
-                className="text-gray dark:text-secondary hover:bg-gray dark:hover:bg-secondary focus:outline-none focus:ring-4 focus:ring-gray dark:focus:ring-secondary rounded-lg text-sm p-2.5 "
+                className="text-gray dark:text-secondary hover:bg-primary_light dark:hover:bg-primary focus:outline-none focus:ring-4 focus:ring-gray dark:focus:ring-secondary rounded-lg text-sm p-2.5 "
             >
-                {isLightMode &&
+                {!isLightMode &&
                         <svg
                             className="w-5 h-5"
                             fill="currentColor"
@@ -48,7 +40,7 @@ const updateThemeChange =(isLightMode) => {
                             ></path>
                         </svg>
                 }
-                {!isLightMode &&
+                {isLightMode &&
                     <svg
                             className="w-5 h-5"
                             fill="currentColor"
