@@ -1,7 +1,7 @@
 import React from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-import MobileStepper from "@mui/material/MobileStepper";
+//import MobileStepper from "@mui/material/MobileStepper";
 import { isMobile } from 'react-device-detect';
 import { Column, Text, Img } from "components";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);

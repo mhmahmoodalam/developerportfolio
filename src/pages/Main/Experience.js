@@ -1,6 +1,6 @@
 import React from "react";
 import { Column, Text, Row, Img } from "components";
-import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
   
 const ExpCompanyDetails = (props) => {
     const { period, role, company, align  } = props
