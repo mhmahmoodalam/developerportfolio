@@ -4,7 +4,7 @@ import { Column, Text, Row,PagerIndicator, CircularProgressBar } from "component
 const PercentageInfoCard = (data) => {
    const { title, skills } = data
  return (
-         <Column className="flex flex-col sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[49%]">
+         <Column className="flex flex-col sm:mx-[0] md:p-[11px] p-[16px] sm:px-[0px] sm:py-[8px] sm:w-[100%] w-[49%]">
              <Text
                className="not-italic dark:text-primary_text text-primary_text_light md:tracking-ls1 sm:tracking-ls1 tracking-ls128 w-[auto]"
                as="h4"

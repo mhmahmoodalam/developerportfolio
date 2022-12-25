@@ -52,10 +52,10 @@ const FrameOnePage = () => {
           </Column>
         </Column>
         <Column className="dark:bg-primary bg-primary_light  flex flex-col items-center justify-end sm:p-[15px] md:p-[51px] p-[75px] rounded-radius2 w-[100%]">
-          <Column className="flex flex-col items-center justify-start max-w-[1024px] ml-[auto] mr-[auto] md:mt-[10px] mt-[15px] sm:mt-[7px] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
+          <Column className="flex flex-col items-center justify-start max-w-[1024px] ml-[auto] mr-[auto] md:mt-[10px] mt-[15px] sm:mt-[7px] sm:mx-[0] sm:px-[0] w-[100%]">
             
               <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start justify-between p-[10px] sm:p-[5px] md:p-[6px] w-[100%]">
-                <Column className="flex flex-col items-center justify-start w-[100%] m-[20px]">
+                <Column className="flex flex-col items-center justify-start w-[100%] sm:m-[10px] m-[20px]">
                   {
                     description.about.map((value,key) => {
                       return (
@@ -71,7 +71,7 @@ const FrameOnePage = () => {
                     })
                   }
                 </Column>
-                <Column className="flex flex-col items-center justify-start w-[100%] m-[20px]">
+                <Column className="flex flex-col items-center justify-start w-[100%] sm:m-[10px] m-[20px]">
                 {
                   description.skills.map((value,key) => {
                     return (
@@ -88,7 +88,7 @@ const FrameOnePage = () => {
                 }
                 </Column>
               </Row>
-              <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-center sm:mt-[20px] md:mt-[26px] mt-[38px] sm:mx-[0] sm:px-[0] sm:w-[100%] w-[66%]">
+              <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-center sm:mt-[20px] sm:mx-[30px] md:mt-[26px] mt-[38px]  sm:px-[0] sm:w-[100%] w-[66%]">
                 
                 {
                   description.data.map((data,key) =>{
@@ -111,18 +111,16 @@ const FrameOnePage = () => {
             <Column className="flex flex-col items-center justify-start max-w-[1024px] sm:mb-[10px] md:mb-[13px] mb-[20px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
               {
                   experiences.map((exp,key) => {
-                    return (
-                      ExperienceView(exp,key)
-                )                
+                    return (<ExperienceView exp={exp} index={key} />)                
               })
             }              
             </Column>
           </Column>
         </Column>
         <Column className="dark:bg-primary bg-primary_light  flex flex-col items-center justify-start sm:p-[15px] md:p-[49px] p-[72px] rounded-radius2 w-[100%]">
-          <Column className="flex flex-col items-center justify-center max-w-[1024px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
-            <Column className="flex flex-col items-center justify-center md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] w-[100%]">
-              <Row className="flex flex-row md:flex-wrap sm:flex-wrap   justify-between md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] w-[100%]">
+          <Column className="flex flex-col items-center justify-center max-w-[1024px] ml-[auto] mr-[auto] sm:mx-[0]  sm:px-[0] w-[100%]">
+            <Column className="flex flex-col items-center justify-center md:p-[11px] p-[16px] sm:p-[0px] w-[100%]">
+              <Row className="flex flex-row md:flex-wrap sm:flex-wrap   justify-between md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[11px] p-[16px] sm:p-[15px] sm:py-[8px] w-[100%]">
                 {
                   skillSet.percentageFormat.map((card, key) => {
                     return <PercentageInfoCard {...card} key={`percentformat_skill_card_`+key}/>

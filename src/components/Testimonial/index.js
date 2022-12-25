@@ -2,16 +2,17 @@ import React from "react";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import MobileStepper from "@mui/material/MobileStepper";
+import { isMobile } from 'react-device-detect';
 import { Column, Text, Img } from "components";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const TestimonialBox = (props) => {
     return (
-        <>
+        <div className="sm:wd-[360px]">
             <Column className="flex flex-col items-center justify-start md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] w-[100%]">
               <Column className="flex flex-col items-center justify-start md:p-[13px] p-[20px] sm:px-[15px] sm:py-[10px] rounded-radius10 w-[100%]">
                 <Text
-                  className="font-normal leading-[normal] not-italic text-center dark:text-primary_text text-primary_text_light md:tracking-ls1 sm:tracking-ls1 tracking-ls28000000000000003 w-[100%]"
+                  className="sm:wd-[360px] font-normal leading-[normal] not-italic text-center dark:text-primary_text text-primary_text_light md:tracking-ls1 sm:tracking-ls1 tracking-ls28000000000000003 w-[100%]"
                   as="h4"
                   variant="h4"
                 >
@@ -45,7 +46,7 @@ const TestimonialBox = (props) => {
                 </Text>
               </Column>
             </Column>
-        </>
+        </div>
     )
 }
 const Testimonial= (testimonials) =>{
@@ -59,16 +60,22 @@ const Testimonial= (testimonials) =>{
             position="center"
             activeStep={activeStep}
           />*/
+    const style = {
+      width : isMobile ? "360px" : "720px",
+      padding: isMobile ? "10px" : "20px",
+      margin: isMobile ? "10px" : "20px",
+    }
     return (
-        <div className="mt-[24px] sm:mt-[8px] md:mt-[16px]">
+        <div className="mt-[24px] sm:mt-[8px] md:mt-[16px] sm:wd-[360px]">
           <AutoPlaySwipeableViews
             axis={"x"}
             index={activeStep}
             onChangeIndex={setActiveStep}
             interval={4000}
+            style={style}
           >
             {data.map((step, index) => (
-              <div key={`testimonial_`+index}>
+              <div key={`testimonial_`+index} className="sm:wd-[360px]">
                 {Math.abs(activeStep - index) <= 2 ? (
                   <TestimonialBox {...step}/>
                 ) : null}

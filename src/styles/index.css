@@ -177,9 +177,20 @@ ul li a{
 
 .dark-mode-switch{
   position: absolute;
-  top: 40px;
-  left: 80vw;
-  height: 100px;
-  width: 100px;
   z-index: 9999;
+}
+
+.experience-card-flow {
+  z-index : 0;  
+}
+
+.experience-card-flow::before {
+  top: 0;
+  left: -16px;
+  width: 1px;
+  height: 100%;
+  content: "";
+  position: relative;
+  background-color: var(--primary);
+  z-index : 199;
 }

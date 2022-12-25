@@ -1,6 +1,6 @@
 import React from "react";
 import { Column, Text, Row, Img } from "components";
-
+import { BrowserView, MobileView, isMobile } from 'react-device-detect';
   
 const ExpCompanyDetails = (props) => {
     const { period, role, company, align  } = props
@@ -68,14 +68,23 @@ const ExpDivider = () => {
     )
   }
   
-  const ExperienceView = (exp, key) => {
+  const ExperienceView = ({exp, index}) => {
+    console.log( index, isMobile)
    return (
-    <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[100%]" key={`exp_row_`+key}>
-      {
-        key % 2 === 0
-        ? <><ExpCompanyDetails {...exp} align={"right"} /><ExpDivider /><ExpRolesDetails {...exp} align={"left"}/></>
-        : <><ExpRolesDetails {...exp} align={"right"} /><ExpDivider /><ExpCompanyDetails {...exp} align={"left"}/></>
-      }
+    <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[100%]" key={`exp_row_`+index}>
+       { 
+          !isMobile &&
+          index % 2 === 0
+          ? <><ExpCompanyDetails {...exp} align={"right"} /><ExpDivider /><ExpRolesDetails {...exp} align={"left"}/></>
+          : <><ExpRolesDetails {...exp} align={"right"} /><ExpDivider /><ExpCompanyDetails {...exp} align={"left"}/></>
+        }
+        {
+          isMobile &&
+          <>
+            <ExpCompanyDetails {...exp} align={"left"}/>
+            <ExpRolesDetails {...exp} align={"left"}/>
+          </>
+        }
     </Row>
    )
   }

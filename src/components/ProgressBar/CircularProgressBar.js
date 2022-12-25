@@ -5,7 +5,6 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 
 const CircularProgressBar = ({
-  className,
   title =[],
   value = 0,
   textVariant="h2",
@@ -35,9 +34,9 @@ const CircularProgressBar = ({
   },[inView, dataValue,progressValue, value])
 
   return (
-    <div className={className} ref={ref}>
-      <Row className="flex flex-row md:flex-wrap sm:flex-wrap  justify-space-between items-center sm:m-[4px] m-[8px]  sm:w-[100%] w-[auto]">
-          <div className="relative inline-flex ">
+    <div className="flex flex-row md:flex-wrap sm:flex-wrap sm:m-[0px] m-[8px] sm:w-[100%] w-[auto] justify-space-between items-center" ref={ref}>
+      <Row className="flex flex-row justify-start items-center">
+          <div className="relative inline-flex m-[8px]">
             <CircularProgress variant="determinate" value={progressValue} size={circularProgressSize} style={{ color : "var(--variant3)"}}/>
             <div className={`absolute bottom-0 left-0 bottom-0 right-0 flex items-center justify-center h-[100%] `}>
               <Text
@@ -51,7 +50,7 @@ const CircularProgressBar = ({
           </div>
           {title && title.length > 0 &&
             <Text
-                className="leading-[normal] md:ml-[11px] ml-[16px] sm:mx-[0] not-italic text-primary_text_light dark:text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls128 sm:w-[100%] w-[57%]"
+                className="leading-[normal]  not-italic text-primary_text_light dark:text-primary_text md:tracking-ls1 sm:tracking-ls1 tracking-ls128 sm:w-[100%] w-[57%]"
                 as={descriptionVariant}
                 variant={descriptionVariant}
             >

@@ -20,15 +20,15 @@ const updateThemeChange =(isLightMode) => {
         updateThemeChange(isLightMode);
     },[isLightMode, themeMode ])
     return (
-        <div className="dark-mode-switch" >
+        <div className="dark-mode-switch sm:w-8 sm:h-8 md:w-8 md:h-8 w-10 h-10 left-[80%] sm:left-[5%] md:left-[80%]" >
             <button
                 type="button"
                 onClick={() =>setIsLightMode(!isLightMode)}
-                className="text-gray dark:text-secondary hover:bg-primary_light dark:hover:bg-primary focus:outline-none focus:ring-4 focus:ring-gray dark:focus:ring-secondary rounded-lg text-sm p-2.5 "
+                className="text-gray border border-gray dark:border-secondary dark:text-secondary hover:bg-primary_light dark:hover:bg-primary focus:outline-none focus:ring-4 focus:ring-gray dark:focus:ring-secondary rounded-lg text-sm p-2.5"
             >
                 {!isLightMode &&
                         <svg
-                            className="w-5 h-5"
+                            className="sm:w-6 sm:h-6 md:w-8 md:h-8 w-8 h-8"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const updateThemeChange =(isLightMode) => {
                 }
                 {isLightMode &&
                     <svg
-                            className="w-5 h-5"
+                            className="sm:w-6 sm:h-6 md:w-8 md:h-8 w-8 h-8"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
