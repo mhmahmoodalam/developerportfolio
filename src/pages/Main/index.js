@@ -3,7 +3,7 @@ import GetProfileData from "data/profiledata";
 import { 
   Column, Text, Row,
   Img, Line, CircularProgressBar, 
-  Testimonial, DarkModeSwitch, Social } from "components";
+  Testimonial, DarkModeSwitch, FloatingSocial } from "components";
 import ExperienceView from "./Experience";
 import { PercentageInfoCard, BarInfoCard } from "./Info";
 import { useReactToPrint } from 'react-to-print';
@@ -17,7 +17,10 @@ const FrameOnePage = () => {
   });
   return (
     <div ref={componentRef}>
+      <FloatingSocial socialLinks={intro.socialLinks} handleExport={handleExport}/>
       <Column className="dark:bg-gradient bg-gradient_light  flex flex-col font-actor items-center justify-start mx-[auto] w-[100%]">
+        
+        
         <Column className="flex flex-col items-center justify-start md:p-[33px] p-[48px] sm:px-[15px] sm:py-[25px] w-[100%]">
           <Column className="flex flex-col justify-start max-w-[882px] sm:mb-[20px] md:mb-[26px] mb-[39px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
             <DarkModeSwitch />
@@ -45,7 +48,6 @@ const FrameOnePage = () => {
                   >
                     {intro.titleWithDescription}
                   </Text>
-                  <Social socialLinks={intro.socialLinks} handleExport={handleExport}/>
                 </Column>
               </Column>
             </Row>

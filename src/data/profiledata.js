@@ -15,7 +15,16 @@ const intro = {
         {
             link: "https://www.hackerrank.com/mhmahmoodalam",
             iconClass: "fab fa-hackerrank"
+        },
+        {
+            link: "https://wa.me/9160954481",
+            iconClass: "fab fa-whatsapp"
+        },        
+        {
+            link: "mailto:mh.mahmood.alam@gmail.com",
+            iconClass: "fas fa-envelope"
         }
+
     ]
 }
 

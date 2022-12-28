@@ -12,7 +12,7 @@ import { PagerIndicator } from "./PagerIndicator";
 import { CircularProgressBar } from "./ProgressBar/CircularProgressBar";
 import { Testimonial } from "./Testimonial";
 import { DarkModeSwitch } from "./DarkMode"
-import { Social } from "./Social"
+import { Social, FloatingSocial } from "./Social"
 
 export {
   Column,
@@ -29,5 +29,7 @@ export {
   CircularProgressBar,
   Testimonial,
   DarkModeSwitch,
-  Social
+  Social,
+  FloatingSocial
+
 };
