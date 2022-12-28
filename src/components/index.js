@@ -13,6 +13,7 @@ import { CircularProgressBar } from "./ProgressBar/CircularProgressBar";
 import { Testimonial } from "./Testimonial";
 import { DarkModeSwitch } from "./DarkMode"
 import { Social, FloatingSocial } from "./Social"
+import { Transition } from "./Transition"
 
 export {
   Column,
@@ -30,6 +31,7 @@ export {
   Testimonial,
   DarkModeSwitch,
   Social,
-  FloatingSocial
+  FloatingSocial,
+  Transition
 
 };

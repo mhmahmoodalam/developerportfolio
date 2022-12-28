@@ -3,10 +3,11 @@ import GetProfileData from "data/profiledata";
 import { 
   Column, Text, Row,
   Img, Line, CircularProgressBar, 
-  Testimonial, DarkModeSwitch, FloatingSocial } from "components";
+  Testimonial, DarkModeSwitch, FloatingSocial, Transition as transition } from "components";
 import ExperienceView from "./Experience";
 import { PercentageInfoCard, BarInfoCard } from "./Info";
 import { useReactToPrint } from 'react-to-print';
+
 
 const FrameOnePage = () => {
   const data = GetProfileData();
@@ -19,8 +20,7 @@ const FrameOnePage = () => {
     <div ref={componentRef}>
       <FloatingSocial socialLinks={intro.socialLinks} handleExport={handleExport}/>
       <Column className="dark:bg-gradient bg-gradient_light  flex flex-col font-actor items-center justify-start mx-[auto] w-[100%]">
-        
-        
+       
         <Column className="flex flex-col items-center justify-start md:p-[33px] p-[48px] sm:px-[15px] sm:py-[25px] w-[100%]">
           <Column className="flex flex-col justify-start max-w-[882px] sm:mb-[20px] md:mb-[26px] mb-[39px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
             <DarkModeSwitch />
@@ -29,8 +29,11 @@ const FrameOnePage = () => {
                 src={intro.logo}
                 className="max-w-[100%] sm:w-[100%] w-[47%]"
                 alt="avaar202221"
+                { ...transition("fade-in") }
               />
-              <Column className="flex flex-col items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[47%]">
+              <Column className="flex flex-col items-center sm:mx-[0] sm:px-[0] sm:w-[100%] w-[47%]"
+                { ...transition("fade-in-up") }
+              >
                 <Column className="flex flex-col justify-start w-[100%]">
                   <Text
                     className="font-roboto leading-[normal] sm:mx-[0] text-gray_100 md:tracking-ls2 sm:tracking-ls2 tracking-ls384 sm:w-[100%] w-[99%]"
@@ -57,7 +60,9 @@ const FrameOnePage = () => {
           <Column className="flex flex-col items-center justify-start max-w-[1024px] ml-[auto] mr-[auto] md:mt-[10px] mt-[15px] sm:mt-[7px] sm:mx-[0] sm:px-[0] w-[100%]">
             
               <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-start justify-between p-[10px] sm:p-[5px] md:p-[6px] w-[100%]">
-                <Column className="flex flex-col items-center justify-start w-[100%] sm:m-[10px] m-[20px]">
+                <Column className="flex flex-col items-center justify-start w-[100%] sm:m-[10px] m-[20px]"
+                 { ...transition("fade-up") }
+                >
                   {
                     description.about.map((value,key) => {
                       return (
@@ -73,7 +78,9 @@ const FrameOnePage = () => {
                     })
                   }
                 </Column>
-                <Column className="flex flex-col items-center justify-start w-[100%] sm:m-[10px] m-[20px]">
+                <Column className="flex flex-col items-center justify-start w-[100%] sm:m-[10px] m-[20px]"
+                { ...transition("fade-up") }
+                >
                 {
                   description.skills.map((value,key) => {
                     return (
@@ -90,7 +97,9 @@ const FrameOnePage = () => {
                 }
                 </Column>
               </Row>
-              <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-center sm:mt-[20px] sm:mx-[30px] md:mt-[26px] mt-[38px]  sm:px-[0] sm:w-[100%] w-[66%]">
+              <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center justify-center sm:mt-[20px] sm:mx-[30px] md:mt-[26px] mt-[38px]  sm:px-[0] sm:w-[100%] w-[66%]"
+              { ...transition("fade-up") }
+              >
                 
                 {
                   description.data.map((data,key) =>{
@@ -110,7 +119,9 @@ const FrameOnePage = () => {
         </Column>
         <Column className="dark:bg-gradient bg-gradient_light flex flex-col items-center justify-start w-[100%]">
           <Column className=" flex flex-col items-center justify-start md:p-[13px] p-[20px] sm:px-[15px] sm:py-[10px] rounded-radius2 w-[100%]">
-            <Column className="flex flex-col items-center justify-start max-w-[1024px] sm:mb-[10px] md:mb-[13px] mb-[20px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
+            <Column className="flex flex-col items-center justify-start max-w-[1024px] sm:mb-[10px] md:mb-[13px] mb-[20px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]"
+              
+            >
               {
                   experiences.map((exp,key) => {
                     return (<ExperienceView exp={exp} index={key} />)                
@@ -122,7 +133,9 @@ const FrameOnePage = () => {
         <Column className="dark:bg-primary bg-primary_light  flex flex-col items-center justify-start sm:p-[15px] md:p-[49px] p-[72px] rounded-radius2 w-[100%]">
           <Column className="flex flex-col items-center justify-center max-w-[1024px] ml-[auto] mr-[auto] sm:mx-[0]  sm:px-[0] w-[100%]">
             <Column className="flex flex-col items-center justify-center md:p-[11px] p-[16px] sm:p-[0px] w-[100%]">
-              <Row className="flex flex-row md:flex-wrap sm:flex-wrap   justify-between md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[11px] p-[16px] sm:p-[15px] sm:py-[8px] w-[100%]">
+              <Row className="flex flex-row md:flex-wrap sm:flex-wrap   justify-between md:mt-[11px] mt-[16px] sm:mt-[8px] md:p-[11px] p-[16px] sm:p-[15px] sm:py-[8px] w-[100%]"
+              {...transition("fade-up")}
+              >
                 {
                   skillSet.percentageFormat.map((card, key) => {
                     return <PercentageInfoCard {...card} key={`percentformat_skill_card_`+key}/>
@@ -131,7 +144,7 @@ const FrameOnePage = () => {
               </Row>
               <Row
                 className="md:gap-[11px] gap-[16px] sm:gap-[8px] grid sm:grid-cols-1 grid-cols-2 min-h-[auto] sm:mt-[17px] md:mt-[22px] mt-[32px] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] w-[100%]"
-                
+                {...transition("fade-up")}
               >
                 {
                   skillSet.barFormat.map((card,key) => {
@@ -144,7 +157,9 @@ const FrameOnePage = () => {
         </Column>
         <Column className="dark:bg-gradient bg-gradient_light  flex flex-col items-center justify-start md:p-[48px] p-[70px] sm:px-[15px] sm:py-[37px] rounded-radius2 w-[100%]">
           <Column className="flex flex-col items-center justify-start max-w-[984px] ml-[auto] mr-[auto] sm:mx-[0] sm:pl-[15px] sm:pr-[15px] sm:px-[0] w-[100%]">
-            <Column className="flex flex-col items-center justify-start w-[100%]">
+            <Column className="flex flex-col items-center justify-start w-[100%]"
+              {...transition("zoom-in")}
+             >
               <Column className="flex flex-col items-center justify-start sm:mx-[0] sm:px-[0] sm:w-[100%] w-[35%]">
                 <Line className="bg-white_A700 h-[3px] w-[22%]" />
                 <Text

@@ -3,7 +3,13 @@ import React from "react";
 const FloatingSocial = (props) => {
   const { socialLinks=[], handleExport } = props
   return (
-    <div class="fixed left-[35px]  w-[20px] h-[350px] sm:w-full  sm:left-[0] bottom-0 sm:h-[auto] z-50 bg-transparent sm:bg-primary dark:sm:bg-primary_light">
+    <div class="fixed left-[35px]  w-[20px] h-[350px] sm:w-full  sm:left-[0] bottom-0 sm:h-[auto] z-50 bg-transparent sm:bg-primary dark:sm:bg-primary_light"
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div class="absolute top-0 left-0 sm:relative z-50 p-0 sm:p-4 w-auto sm:w-max">
         {
               socialLinks.map((socialLink,key)=> {

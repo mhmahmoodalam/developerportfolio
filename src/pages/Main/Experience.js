@@ -1,5 +1,5 @@
 import React from "react";
-import { Column, Text, Row, Img } from "components";
+import { Column, Text, Row, Img, Transition as transition } from "components";
 import { isMobile } from 'react-device-detect';
   
 const ExpCompanyDetails = (props) => {
@@ -70,6 +70,8 @@ const ExpDivider = () => {
   }
   
   const ExperienceView = ({exp, index}) => {
+    
+    const transitionEffect = transition("fade-up") 
     const webView = index % 2 === 0
     ? <><ExpCompanyDetails {...exp} align={"right"} /><ExpDivider /><ExpRolesDetails {...exp} align={"left"} /></>
     : <><ExpRolesDetails {...exp} align={"right"} /><ExpDivider /><ExpCompanyDetails {...exp} align={"left"}/></>
@@ -77,7 +79,10 @@ const ExpDivider = () => {
     
     
    return (
-    <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[100%]" key={`exp_row_`+index}>
+    <Row className="flex flex-row md:flex-wrap sm:flex-wrap items-center sm:mx-[0] md:p-[11px] p-[16px] sm:px-[15px] sm:py-[8px] sm:w-[100%] w-[100%]" key={`exp_row_`+index}
+    
+      {...transitionEffect}
+    >
        { 
           !isMobile && webView
         }
