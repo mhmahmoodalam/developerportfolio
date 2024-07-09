@@ -1,9 +1,5 @@
 import React, { useRef } from "react";
 import GetProfileData from "data/profiledata";
-import { 
-  Column, Text, Row,
-  Img, Line, CircularProgressBar, 
-  Testimonial, DarkModeSwitch, FloatingSocial, Transition as transition } from "components";
 import ExperienceView from "./Experience";
 import { PercentageInfoCard, BarInfoCard } from "./Info";
 import { useReactToPrint } from 'react-to-print';
