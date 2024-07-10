@@ -149,97 +149,57 @@ const experiences = {
 };
 
 const skillSet = {
-  title:"My Tech Stack",
-  description: "Experience with wide range of technologies and commitment to staying updated to latest technologies",
-  percentageFormat: [
+  title: "My Tech Stack",
+  description:
+    "Experience with wide range of technologies and commitment to staying updated to latest technologies",
+  skills: [
     {
-      title: "Design Skills",
-      skills: [
-        {
-          /* 0 - 100 values only */
-          percentage: 75,
-          /* comma seprated if multiple values */
-          name: "CSS",
-        },
-        {
-          percentage: 40,
-          name: "Typography",
-        },
-      ],
+      type: "Stylesheet",
+      name: "CSS",
     },
     {
-      title: "Development Skills",
-      skills: [
-        {
-          /* 0 - 100 values only */
-          percentage: 60,
-          /* comma seprated if multiple values */
-          name: "Code quality",
-        },
-        {
-          percentage: 50,
-          name: "LLD",
-        },
-
-        {
-          percentage: 50,
-          name: "HLD",
-        },
-      ],
-    },
-  ],
-  barFormat: [
-    {
-      title: "Backend Skills",
-      skills: [
-        {
-          /* 0 - 5 values only */
-          value: 4,
-          /* comma seprated if multiple values */
-          name: "Java, Spring boot, Spring Cloud",
-        },
-        {
-          value: 3,
-          name: "Hibernate, JPA",
-        },
-        {
-          value: 3,
-          name: "AWS, Azure",
-        },
-        {
-          value: 3,
-          name: "Docker, Kubernetes",
-        },
-        {
-          value: 3,
-          name: "JUnit, Postman",
-        },
-      ],
+      type: "Language",
+      name: "Java",
     },
     {
-      title: "Frontend Skills",
-      skills: [
-        {
-          value: 4,
-          name: "HTML",
-        },
-        {
-          value: 4,
-          name: "React",
-        },
-        {
-          value: 3,
-          name: "Javascript",
-        },
-        {
-          value: 3,
-          name: "GraphQl, Apollo-link-state",
-        },
-        {
-          value: 3,
-          name: "Jest, Protractor",
-        },
-      ],
+      type: "Markup",
+      name: "HTML",
+    },
+    {
+      type: "Library",
+      name: "React",
+    },
+    {
+      type: "Language",
+      name: "Javascript",
+    },
+    {
+      type: "Framework",
+      name: "Spring boot",
+    },
+    {
+      type: "ORM",
+      name: "Hibernate",
+    },
+    {
+      type: "Cloud",
+      name: "Azure",
+    },
+    {
+      type: "Container",
+      name: "Docker",
+    },
+    {
+      type: "Orchestration",
+      name: "Kubernetes",
+    },
+    {
+      type: "Library",
+      name: "GraphQl",
+    },
+    {
+      type: "Library",
+      name: "Apollo-link-state",
     },
   ],
 };
