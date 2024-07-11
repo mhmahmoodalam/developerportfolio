@@ -2,15 +2,16 @@
 
 import * as React from "react";
 import GetProfileData from "@/data/profiledata";
-import { Badge } from "./ui/badge";
 import { BriefcaseBusiness, Circle } from "lucide-react";
-import Link from "next/link";
 
 export const ExperienceCard = () => {
   const { experiences } = GetProfileData();
 
   return (
-    <div className="flex flex-col max-w-4xl justify-center items-start  w-full mt-16 gap-8">
+    <div
+      className="flex flex-col max-w-4xl justify-center items-start  w-full mt-16 mb-10 gap-8"
+      id="expDevDiv"
+    >
       <div className="flex flex-row gap-4">
         <BriefcaseBusiness className="h-8 w-8" />
         <h3 className="text-2xl">{experiences.title}</h3>
@@ -35,11 +36,11 @@ export const ExperienceCard = () => {
         {experiences.history.map((exp, key) => {
           return (
             <div
-              className="flex flex-col gap-4 border-2 rounded-lg p-8"
+              className="flex flex-col gap-4 border-2 rounded-lg p-8 bg-gray-600 bg-opacity-25"
               key={`experience_card_${key}`}
             >
               <div className="flex flex-row gap-4 justify-between items-center w-full">
-                <div className="flex flex-row gap-2 justify-start items-center">
+                <div className="flex flex-row gap-2 justify-start items-center sm:flex-wrap md:flex-nowrap">
                   <img
                     className="h-auto w-36 rounded-lg"
                     src={exp.logo}
@@ -72,7 +73,7 @@ export const ExperienceCard = () => {
                   {exp.roleChanges.map((changes, key) => {
                     return (
                       <div
-                        className="flex flex-row items-center gap-2"
+                        className="flex flex-row items-center gap-2 sm:flex-wrap md:flex-nowrap"
                         key={`role_transitions_${key}`}
                       >
                         <Circle
@@ -83,7 +84,7 @@ export const ExperienceCard = () => {
                           }`}
                         />
                         <span>{changes.title}</span>
-                        <span>{changes.date}</span>
+                        <span className="sm:ml-6 md:ml-0">{changes.date}</span>
                       </div>
                     );
                   })}

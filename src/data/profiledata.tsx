@@ -1,5 +1,7 @@
+import { Github, Linkedin, MessageCircle, Braces, Mail } from "lucide-react";
+
 const intro = {
-  logo: "images/img_avaar202221.png",
+  logo: "/images/avatar.png",
   firstName: "Muhammed",
   lastName: "Mahmood Alam.",
   greeting: "Hello! I am",
@@ -11,24 +13,29 @@ const intro = {
   ],
   socialLinks: [
     {
+      name: "Github",
       link: "https://github.com/mhmahmoodalam",
-      iconClass: "fab fa-github",
+      iconClass: <Github />,
     },
     {
+      name: "LinkedIn",
       link: "https://www.linkedin.com/in/mhmahmoodalam",
-      iconClass: "fab fa-linkedin",
+      iconClass: <Linkedin />,
     },
     {
+      name: "Hacker Rank",
       link: "https://www.hackerrank.com/mhmahmoodalam",
-      iconClass: "fab fa-hackerrank",
+      iconClass: <Braces />,
     },
     {
+      name: "Whatsapp",
       link: "https://wa.me/9160954481",
-      iconClass: "fab fa-whatsapp",
+      iconClass: <MessageCircle />,
     },
     {
+      name: "Mail",
       link: "mailto:mh.mahmood.alam@gmail.com",
-      iconClass: "fas fa-envelope",
+      iconClass: <Mail />,
     },
   ],
 };
@@ -70,40 +77,6 @@ const experiences = {
   ],
   history: [
     {
-      startDate: "July, 2014",
-      endDate: "June, 2014",
-      company: "Infosys Ltd",
-      url: "infosys.com",
-      type: "Tech Firm",
-      logo: "/images/infosys_logo.png",
-      partnerCompany: {
-        name: "NORDSTROM",
-        url: "https://www.nordstrom.com",
-        logo: "/images/nordstrom_logo.png",
-      },
-      role: "Senior System Engineer",
-      responsibilities: [
-        "Migration of SOAP based backend to Rest based spring boot application",
-        "Developed solutions to manage customer and customer address around Informatica MDM infrastructure",
-        "Proposed technical feasibility solutions for new system designs and suggested options for performance improvement of technical components.",
-        "Created manuals and took training sessions to educate co-workers on new systems.",
-      ],
-      roleChanges: [
-        {
-          title: "Senior System Engineer",
-          date: "August, 2016",
-        },
-        {
-          title: "System Engineer",
-          date: "October, 2014",
-        },
-        {
-          title: "Intern",
-          date: "Jun, 2014",
-        },
-      ],
-    },
-    {
       startDate: "August, 2018",
       endDate: null,
       company: "Siemens Technologies Ltd",
@@ -142,6 +115,40 @@ const experiences = {
         {
           title: "Senior Software Developer",
           date: "Aug, 2018",
+        },
+      ],
+    },
+    {
+      startDate: "July, 2014",
+      endDate: "June, 2014",
+      company: "Infosys Ltd",
+      url: "infosys.com",
+      type: "Tech Firm",
+      logo: "/images/infosys_logo.png",
+      partnerCompany: {
+        name: "NORDSTROM",
+        url: "https://www.nordstrom.com",
+        logo: "/images/nordstrom_logo.png",
+      },
+      role: "Senior System Engineer",
+      responsibilities: [
+        "Migration of SOAP based backend to Rest based spring boot application",
+        "Developed solutions to manage customer and customer address around Informatica MDM infrastructure",
+        "Proposed technical feasibility solutions for new system designs and suggested options for performance improvement of technical components.",
+        "Created manuals and took training sessions to educate co-workers on new systems.",
+      ],
+      roleChanges: [
+        {
+          title: "Senior System Engineer",
+          date: "August, 2016",
+        },
+        {
+          title: "System Engineer",
+          date: "October, 2014",
+        },
+        {
+          title: "Intern",
+          date: "Jun, 2014",
         },
       ],
     },
@@ -205,43 +212,49 @@ const skillSet = {
 };
 
 const testimonials = {
-  title: "what they say about me",
+  title: "Words From Fellow Teammates",
+  description:
+    "Discover what my team has to say about their experiences working with me",
   data: [
     {
       comment:
         "He is one of best software engineer I have ever worked with. His broad spectrum of knowledge in Java, React and cloud technologies is really recommendable. He is a true team player and has a very approachable attitude. His dedication and approach towards solving any complex problem is very good. If you have Alam by your side in your team , you can go on a war with him. I know wherever he will be wokring he will do wonders.",
-      profilePic:
-        "https://media.licdn.com/dms/image/C5103AQHW6AgtbDVVvg/profile-displayphoto-shrink_200_200/0/1547030495970?e=1677110400&v=beta&t=i4aLc6DU5plFtV4cpOe4WnfMqZPEIP5R3LtjkDybBq0",
+      profilePic: "/images/people/souvik.jfif",
       name: "Souvik Mukherjee",
       role: "Senior Software Technologist",
+      socialLink: "https://www.linkedin.com/in/souvik-mukherjee0591/",
       company: "Philips",
+      location: "Bengaluru, India",
     },
     {
       comment:
         "He is always open to learn and very dedicated to complete his task. He has very special ability in mentoring and guiding his junior in different tech stack. I found him a highly skilled and dedicated professional so I highly recommend him for company looking for great talent and dedication.",
-      profilePic:
-        "https://media.licdn.com/dms/image/C5603AQGRT7AVMV0S7w/profile-displayphoto-shrink_200_200/0/1620468093250?e=1677110400&v=beta&t=oe1Tc4WzvlN2O2E932y9uCzSw7pITXvhgot0_-bNMrk",
+      profilePic: "/images/people/krishna-gupta.jfif",
       name: "Krishna Gupta",
       role: "Senior Software Engineer",
+      socialLink: "https://www.linkedin.com/in/krishnaguptag/",
       company: "EPAM Systems",
+      location: "Bengaluru, India",
     },
     {
       comment:
         "Alam has been a prime example of talent, dedication, and the desire to study and take on difficult technical tasks. He has been a member of my team for about three years, and he served as our team's go-to resource for any new technical difficulty. He has consistently been one of my team's top contributors, and I would be happy to have him on board.",
-      profilePic:
-        "https://media.licdn.com/dms/image/D5603AQHjkWXXCLApzQ/profile-displayphoto-shrink_200_200/0/1671457628409?e=1677110400&v=beta&t=nHfaIu96yS_yqxtm35UT8xk5Dela3zLGCHce70gdBRM",
+      profilePic: "/images/people/mohit-johri.jfif",
       name: "Mohit Johri",
-      role: "Engineering Manager",
-      company: "Thales",
+      role: "Senior Manager",
+      company: "Siemens Healthineers",
+      socialLink: "https://www.linkedin.com/in/mjohri/",
+      location: "Bengaluru, India",
     },
     {
       comment:
         "He is a very quick learner, and he certainly has the ability to deliver under pressure. His commitments to the project and business growth is unwavering.",
-      profilePic:
-        "https://media.licdn.com/dms/image/C5603AQHde1ACrhnj3Q/profile-displayphoto-shrink_200_200/0/1617183257667?e=1677110400&v=beta&t=PBoi3XvckHy-Wobnp0QI93x8BgUYEWm2_AV--_B1U_M",
+      profilePic: "/images/people/nachiappan-k.jfif",
       name: "Nachiappan Kumarappan",
       role: "Senior Software Engineer",
       company: "Microsoft",
+      socialLink: "https://www.linkedin.com/in/nachiappannk/",
+      location: "Hyderabad, India",
     },
   ],
 };

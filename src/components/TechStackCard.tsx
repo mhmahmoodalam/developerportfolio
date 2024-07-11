@@ -19,17 +19,28 @@ import SpringSvg from "@/assets/images/spring.svg";
 import TailwindSvg from "@/assets/images/tailwindcss.svg";
 import XamarinSvg from "@/assets/images/xamarin.svg";
 import CsharpSvg from "@/assets/images/csharp.svg";
+import HelmSvg from "@/assets/images/helm.svg";
+import MongoDbSvg from "@/assets/images/mongodb.svg";
+import PostgresSvg from "@/assets/images/postgresql.svg";
+import PostmanSvg from "@/assets/images/postman.svg";
+import FigmaSvg from "@/assets/images/figma.svg";
+
+
+
 export const TechStackCard = () => {
   const { skillSet } = GetProfileData();
 
   return (
-    <div className="flex flex-col max-w-4xl justify-center items-start  w-full mt-16 gap-8">
+    <div
+      className="flex flex-col max-w-4xl justify-center items-start  w-full mt-16 gap-8"
+      id="techStack"
+    >
       <div className="flex flex-row gap-4">
         <Layers3 className="h-8 w-8" />
         <h3 className="text-2xl">{skillSet.title}</h3>
       </div>
       <h3 className="text-xl">{skillSet.description}</h3>
-      <div className="flex w-full gap-12 flex-wrap mt-16 border-2 justify-start items-center rounded-lg p-12">
+      <div className="flex w-full gap-12 flex-wrap mt-10 mb-10 border-2 justify-start items-center rounded-lg p-12 bg-gray-300 bg-opacity-15">
         <div className="w-16 h-auto">
           <Image
             src={HtmlSvg}
@@ -104,6 +115,22 @@ export const TechStackCard = () => {
         </div>
         <div className="w-16 h-auto">
           <Image
+            src={PostgresSvg}
+            alt="postgres"
+            fill={false}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <div className="w-16 h-auto">
+          <Image
+            src={MongoDbSvg}
+            alt="mongodb"
+            fill={false}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <div className="w-16 h-auto">
+          <Image
             src={DockerSvg}
             alt="docker"
             fill={false}
@@ -114,6 +141,14 @@ export const TechStackCard = () => {
           <Image
             src={KubernetsSvg}
             alt="kubernetes"
+            fill={false}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <div className="w-16 h-auto">
+          <Image
+            src={HelmSvg}
+            alt="helm"
             fill={false}
             style={{ objectFit: "contain" }}
           />
@@ -154,6 +189,23 @@ export const TechStackCard = () => {
           <Image
             src={XamarinSvg}
             alt="xamarin"
+            fill={false}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+
+        <div className="w-16 h-auto">
+          <Image
+            src={PostmanSvg}
+            alt="postman"
+            fill={false}
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+        <div className="w-12 h-auto">
+          <Image
+            src={FigmaSvg}
+            alt="figma"
             fill={false}
             style={{ objectFit: "contain" }}
           />

@@ -1,18 +1,19 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { User, FileText, Send, ChevronsUp } from "lucide-react";
-import Link from "next/link";
+import { User, FileText, Send, ChevronsUp, Layers3, PartyPopper } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { jumpToReleventDiv } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 
 export default function LeftComponent() {
-  const jumpToReleventDiv = (id: string) => {
-    const relevantDiv = document.getElementById(id);
-    // behavior: "smooth" parameter for smooth movement
-    console.log(" scrolling to", id, relevantDiv)
-    relevantDiv?.scrollIntoView({ behavior: "smooth" });
-  };
+  
   return (
     <div className="flex h-screen flex-col justify-between w-80 pt-24 pl-16 pr-8  pb-16 border-r-[3px] sticky top-0 left-0">
       <div className="flex flex-col justify-center items-end">
@@ -22,37 +23,110 @@ export default function LeftComponent() {
         </Avatar>
       </div>
       <div className="flex flex-col space-y-4 justify-center items-end">
-        <Button
-          className={`h-12 w-12 hover:border-2 flex items-center justify-center rounded-lg px-2 `}
-          variant={"link"}
-          onClick={() => jumpToReleventDiv("aboutDevDiv")}
-        >
-          <User />
-        </Button>
-        <Button
-          className={`h-12 w-12 hover:border-2 flex items-center justify-center rounded-lg px-2 `}
-          variant={"link"}
-          onClick={() => jumpToReleventDiv("expDevDiv")}
-        >
-          <FileText />
-        </Button>
-        <Button
-          className={`h-12 w-12 hover:border-2 flex items-center justify-center rounded-lg px-2 `}
-          variant={"link"}
-          onClick={() => jumpToReleventDiv("connectDevDiv")}
-        >
-          <Send />
-        </Button>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                className={`h-12 w-12 hover:border-2 hover:bg-gray-600 hover:bg-opacity-40
+           flex items-center justify-center rounded-lg px-2 `}
+                variant={"link"}
+                onClick={() => jumpToReleventDiv("aboutDevDiv")}
+              >
+                <User />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>About</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                className={`h-12 w-12 hover:border-2 flex hover:bg-gray-600 hover:bg-opacity-40 items-center justify-center rounded-lg px-2 `}
+                variant={"link"}
+                onClick={() => jumpToReleventDiv("expDevDiv")}
+              >
+                <FileText />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Experiences</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                className={`h-12 w-12 hover:border-2 flex hover:bg-gray-600 hover:bg-opacity-40 items-center justify-center rounded-lg px-2 `}
+                variant={"link"}
+                onClick={() => jumpToReleventDiv("techStack")}
+              >
+                <Layers3 />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Tech stack</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              
+              <Button
+                className={`h-12 w-12 hover:border-2 flex hover:bg-gray-600 hover:bg-opacity-40 items-center justify-center rounded-lg px-2 `}
+                variant={"link"}
+                onClick={() => jumpToReleventDiv("testimonials")}
+              >
+                <PartyPopper />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Testimonials</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                className={`h-12 w-12 hover:border-2 flex items-center hover:bg-gray-600 hover:bg-opacity-40 justify-center rounded-lg px-2 `}
+                variant={"link"}
+                onClick={() => jumpToReleventDiv("connectDevDiv")}
+              >
+                <Send />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Connect</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
 
       <div className="flex flex-col space-y-4 justify-center items-end">
-        <Button
-          className="h-12 w-12 hover:border-2 flex items-center justify-center rounded-lg px-2"
-          variant={"link"}
-          onClick={() => jumpToReleventDiv("pageStart")}
-        >
-          <ChevronsUp />
-        </Button>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                className="h-12 w-12 hover:border-2 flex items-center hover:bg-gray-600 hover:bg-opacity-40 justify-center rounded-lg px-2"
+                variant={"link"}
+                onClick={() => jumpToReleventDiv("pageStart")}
+              >
+                <ChevronsUp />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Scroll to top</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
     </div>
   );
