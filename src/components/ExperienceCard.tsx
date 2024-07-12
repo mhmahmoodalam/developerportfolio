@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import * as React from "react";
 import GetProfileData from "@/data/profiledata";
 import { BriefcaseBusiness, Circle } from "lucide-react";
@@ -32,6 +32,22 @@ export const ExperienceCard = () => {
           })}
         </ul>
       </div>
+      <div className="flex flex-col gap-2">
+        <h3 className="text-xl">Achievements</h3>
+        <ul className="space-y-2 px-6">
+          {experiences.achievements.map((info, key) => {
+            return (
+              <li
+                className="list-disc text-lg"
+                key={`experience_achievements_${key}`}
+              >
+                {" "}
+                {info}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <div className="flex flex-col w-full gap-12 mt-16">
         {experiences.history.map((exp, key) => {
           return (
@@ -40,13 +56,15 @@ export const ExperienceCard = () => {
               key={`experience_card_${key}`}
             >
               <div className="flex flex-row gap-4 justify-between items-center w-full">
-                <div className="flex flex-row gap-2 justify-start items-center sm:flex-wrap md:flex-nowrap">
-                  <img
-                    className="h-auto w-36 rounded-lg"
+                <div className="flex flex-row gap-4 justify-start items-center sm:flex-wrap md:flex-nowrap">
+                  <Image
                     src={exp.logo}
                     alt={exp.company}
-                  ></img>
-                  <p className="text-lg px-2 py-1 hover:bg-gray-900 border-2 rounded-lg h-10">
+                    fill={false}
+                    style={{ objectFit: "contain" }}
+                    className="w-32 h-auto ml-2"
+                  />
+                  <p className="text-md px-2 py-1 bg-gray-900 border-2 rounded-lg h-9">
                     {exp.type}
                   </p>
                 </div>
@@ -61,11 +79,7 @@ export const ExperienceCard = () => {
               </div>
               <div className="border-2 text-xl rounded-lg p-8 space-y-4">
                 <h2 className="font-bold">{exp.role}</h2>
-                <p className="font-normal">
-                  {exp.responsibilities.flatMap((x, key) => {
-                    return x + ". ";
-                  })}
-                </p>
+                <p className="font-normal">{exp.summary}</p>
               </div>
               <div className="flex flex-col mt-8 gap-4">
                 <h2 className="text-xl font-bold">Role transitions</h2>

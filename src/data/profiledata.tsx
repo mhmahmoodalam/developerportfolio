@@ -1,4 +1,6 @@
 import { Github, Linkedin, MessageCircle, Braces, Mail } from "lucide-react";
+import InfosysLogoSvg from "@/assets/images/companies/infosys-technologies-logo.svg"
+import SiemensLogoSvg from "@/assets/images/companies/siemens-ag-logo.svg";
 
 const intro = {
   logo: "/images/avatar.png",
@@ -75,6 +77,13 @@ const experiences = {
     "Demonstrated skill in translating technical requirements to business solutions.",
     "Eager to contribute to team success through problem solving, attention to detail and excellent organizational skills.",
   ],
+  achievements: [
+    "Developed a community app for collaboration and idea sharing",
+    "Enhanced the cloud services to be performant and reliable",
+    "Developed a Docx to html converter for privacy policy management system saving 300+ hours of manual work",
+    "Help improve user experience with better design flows",
+    "Developed an automated monitoring system that checks for the system logs, analyze the longest running database queries and send weekly report to stakeholders."
+  ],
   history: [
     {
       startDate: "August, 2018",
@@ -82,13 +91,14 @@ const experiences = {
       company: "Siemens Technologies Ltd",
       url: "siemens.com",
       type: "Tech Firm",
-      logo: "/images/siemens_logo.png",
+      logo: SiemensLogoSvg,
       partnerCompany: {
         name: "WSAudiology",
         url: "https://wsa.com",
         logo: "/images/wsa_logo.png",
       },
       role: "Technical Lead Engineer",
+      summary: "Managed a team of 5 developers, providing architectural guidance and identifying optimization opportunities in legacy systems. Conducted tech sessions on microservices and architectural patterns.Migrated a monolithic application to microservice architecture, leveraging containerization and orchestration tools. Collaborated with development and QA teams to design and develop robust, scalable solutions that met client requirements for functionality, scalability, and performance. Participated in the architecture, design, and implementation of backend and frontend features using Java, Xamarin, and React JS.",
       responsibilities: [
         "Managing team of 5 developers",
         "Guiding team on architectural aspects",
@@ -124,13 +134,14 @@ const experiences = {
       company: "Infosys Ltd",
       url: "infosys.com",
       type: "Tech Firm",
-      logo: "/images/infosys_logo.png",
+      logo: InfosysLogoSvg,
       partnerCompany: {
         name: "NORDSTROM",
         url: "https://www.nordstrom.com",
         logo: "/images/nordstrom_logo.png",
       },
       role: "Senior System Engineer",
+      summary: "Led migration from SOAP-based backend to REST-based Spring Boot application. Developed solutions integrating customer and customer address management with Informatica MDM infrastructure. Proposed technical feasibility for new system designs and suggested optimizations for performance. Created manuals and conducted training sessions for team members on new systems. Implemented automated monitoring system for system logs and database queries, generating weekly reports for stakeholders.",
       responsibilities: [
         "Migration of SOAP based backend to Rest based spring boot application",
         "Developed solutions to manage customer and customer address around Informatica MDM infrastructure",

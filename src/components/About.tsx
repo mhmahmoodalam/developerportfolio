@@ -1,6 +1,7 @@
 import GetProfileData from "@/data/profiledata";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import ProfilePic from "@/assets/images/profile/avatar.png"
 
 export const About = () => {
     const { intro, description } =
@@ -13,11 +14,9 @@ export const About = () => {
           bg-opacity-25 lg:w-64 lg:h-64 sm:h-32 sm:w-32"
         >
           <Image
-            src="/images/avatar.png"
+            src={ProfilePic}
             alt="Muhammed mahmood Alam"
-            width={320}
-            height={320}
-            style={{ objectFit: "contain", width: "100%", height: "auto" }}
+            style={{ objectFit: "contain" }}
           />
         </div>
         <div className="flex flex-col w-full space-y-3 justify-center">
