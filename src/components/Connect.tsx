@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,9 +11,17 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {  useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "./ui/form";
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "./ui/form";
+import { SendMail } from "@/lib/SendMail";
 
 const formSchema = z.object({
   firstName: z.string().min(2, {
@@ -29,28 +37,29 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
-    const { toast } = useToast();
+  const { toast } = useToast();
 
-    const form = useForm<z.infer<typeof formSchema>>({
-      resolver: zodResolver(formSchema),
-      defaultValues: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        details: "",
-      },
-    });
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      details: "",
+    },
+  });
 
-    function handleForm(values: z.infer<typeof formSchema>): void {
-      console.log(values);
-      form.reset()
-      toast({
-        title: "Thanks for reaching out!",
-        description:
-          "Your message has successfully navigated the digital highways and reached my inbox. Expect a response from this code ninja soon.",
-      });
-    }
-
+  function handleForm(values: z.infer<typeof formSchema>): void {
+    SendMail(values)
+      .then(() =>
+        toast({
+          title: "Thanks for reaching out!",
+          description:
+            "Your message has successfully navigated the digital highways and reached my inbox. Expect a response from this code ninja soon.",
+        })
+      )
+      .then(() => form.reset());
+  }
 
   return (
     <Card
