@@ -1,7 +1,7 @@
 
 export const GradientBackground = () => {
     return (
-      <div className="fixed h-full w-full overflow-hidden z-[-1] blur-3xl opacity-20">
+      <div className="fixed h-full w-full overflow-hidden z-[-1] blur-3xl opacity-40">
         <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
           <defs>
             <radialGradient

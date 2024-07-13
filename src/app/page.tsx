@@ -9,7 +9,7 @@ import { InspirationalHeader } from "@/components/InpirationalHeader";
 export default function Home() {  
   return (
     <div
-      className="flex flex-col justify-start items-center px-16 pt-8 h-full w-full gap-4 font-mono"
+      className="flex flex-col justify-start items-center px-4 md:px-8 lg:px-16 pt-8 h-full w-full md:w-full gap-4 font-mono"
       id="pageStart"
     >
       <InspirationalHeader />
@@ -23,7 +23,7 @@ export default function Home() {
       <Testimonials />
       <Separator />
       <ContactForm />
-      <div className="m-24" />
+      <div className="mt-20" />
     </div>
   );
 }

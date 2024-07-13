@@ -63,28 +63,28 @@ export function ContactForm() {
 
   return (
     <Card
-      className="max-w-xl w-full mt-24 bg-gray-300 bg-opacity-15"
+      className="max-w-xl w-full mt-16 bg-gray-300 bg-opacity-15"
       id="connectDevDiv"
     >
       <CardHeader>
-        <CardTitle className="text-2xl">Connect with me</CardTitle>
-        <CardDescription className="text-lg">
+        <CardTitle className="text-xl md:text-2xl">Connect with me</CardTitle>
+        <CardDescription className="md:text-lg">
           Please enter your information and details.
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="grid gap-4 text-lg bg-transparent">
+        <div className="grid gap-4 md:text-lg bg-transparent">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(handleForm)}
               className="space-y-8"
             >
-              <div className="grid grid-cols-2 gap-4 text-lg">
+              <div className="grid grid-cols-2 gap-4 md:text-lg">
                 <FormField
                   control={form.control}
                   name="firstName"
                   render={({ field }) => (
-                    <FormItem className="text-lg">
+                    <FormItem className="md:text-lg">
                       <FormLabel>First Name</FormLabel>
                       <FormControl>
                         <Input placeholder="John" {...field} />
@@ -97,7 +97,7 @@ export function ContactForm() {
                   control={form.control}
                   name="lastName"
                   render={({ field }) => (
-                    <FormItem className="text-lg">
+                    <FormItem className=" md:text-lg">
                       <FormLabel>Last Name</FormLabel>
                       <FormControl>
                         <Input placeholder="Robinson" {...field} />
@@ -107,12 +107,12 @@ export function ContactForm() {
                   )}
                 />
               </div>
-              <div className="grid gap-2 text-lg">
+              <div className="grid gap-2 md:textx-lg">
                 <FormField
                   control={form.control}
                   name="email"
                   render={({ field }) => (
-                    <FormItem className="text-lg">
+                    <FormItem className=" md:text-lg">
                       <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input
@@ -125,18 +125,18 @@ export function ContactForm() {
                   )}
                 />
               </div>
-              <div className="grid gap-2 text-lg">
+              <div className="grid gap-2 md:textx-lg">
                 <FormField
                   control={form.control}
                   name="details"
                   render={({ field }) => (
-                    <FormItem className="text-lg">
+                    <FormItem className=" md:text-lg">
                       <FormLabel>Details</FormLabel>
                       <FormControl>
                         <Textarea
                           placeholder="please provide any details that would help me understand your request better"
                           {...field}
-                          className="text-lg h-48"
+                          className=" md:text-lg h-48"
                         />
                       </FormControl>
                       <FormMessage />
@@ -146,7 +146,7 @@ export function ContactForm() {
               </div>
               <Button
                 type="submit"
-                className="w-full text-2xl mt-8 bg-gray-300 bg-opacity-15"
+                className="w-full md:text-2xl mt-8 bg-gray-300 bg-opacity-15"
                 variant={"outline"}
               >
                 Connect
