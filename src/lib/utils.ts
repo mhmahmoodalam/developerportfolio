@@ -9,3 +9,7 @@ export const jumpToReleventDiv = (id: string) => {
   const relevantDiv = document.getElementById(id);
   relevantDiv?.scrollIntoView({ behavior: "smooth" });
 };
+
+export const isMobile = (userAgent: string): boolean => {
+  return /android.+mobile|iphone/i.test(userAgent);
+};
