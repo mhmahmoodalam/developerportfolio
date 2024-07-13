@@ -6,7 +6,8 @@ import { jumpToReleventDiv } from "@/lib/utils";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip";
 import { ChevronsUp } from "lucide-react";
 import Link from "next/link";
-export default function RightComponent({ isMobile }) {
+
+export default function RightComponent({ isMobile }: { isMobile: boolean }) {
   const { intro } = GetProfileData();
   const background = isMobile
     ? "bg-gray-600 bg-opacity-80 backdrop-blur-sm"
@@ -19,7 +20,7 @@ export default function RightComponent({ isMobile }) {
     : "sticky top-0 left-0";
   return (
     <div
-      className={`flex ${orientation} ${background} h-screen border-l-[3px]  ${position}  px-2 lg:w-80 lg:py-24 lg:pl-8 lg:pr-16`}
+      className={`flex ${orientation} ${background} md:h-screen border-l-[3px]  ${position}  px-2 lg:w-80 lg:py-24 lg:pl-8 lg:pr-16`}
     >
       <div className={`flex ${orientation}  `}>
         {intro.socialLinks.map((link, key) => {

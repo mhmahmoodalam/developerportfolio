@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { User, FileText, Send, ChevronsUp, Layers3, PartyPopper } from "lucide-react";
 import {
   Tooltip,
