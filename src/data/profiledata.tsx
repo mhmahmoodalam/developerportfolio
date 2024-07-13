@@ -232,9 +232,9 @@ const testimonials = {
         "He is one of best software engineer I have ever worked with. His broad spectrum of knowledge in Java, React and cloud technologies is really recommendable. He is a true team player and has a very approachable attitude. His dedication and approach towards solving any complex problem is very good. If you have Alam by your side in your team , you can go on a war with him. I know wherever he will be wokring he will do wonders.",
       profilePic: "/images/people/souvik.jfif",
       name: "Souvik Mukherjee",
-      role: "Senior Software Technologist",
+      role: "Lead Software Engineer",
       socialLink: "https://www.linkedin.com/in/souvik-mukherjee0591/",
-      company: "Philips",
+      company: "Allegion",
       location: "Bengaluru, India",
     },
     {

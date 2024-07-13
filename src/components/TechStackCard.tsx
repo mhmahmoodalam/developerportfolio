@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import GetProfileData from "@/data/profiledata";
 import { Layers3 } from "lucide-react";
@@ -35,13 +33,13 @@ export const TechStackCard = () => {
       className="flex flex-col max-w-4xl justify-center items-start  w-full mt-16 gap-8"
       id="techStack"
     >
-      <div className="flex flex-row gap-4">
-        <Layers3 className="h-8 w-8" />
-        <h3 className="text-2xl">{skillSet.title}</h3>
+      <div className="flex flex-row gap-4 items-center">
+        <Layers3 />
+        <h3 className="text-xl md:text-2xl">{skillSet.title}</h3>
       </div>
-      <h3 className="text-xl">{skillSet.description}</h3>
-      <div className="flex w-full gap-12 flex-wrap mt-10 mb-10 border-2 justify-start items-center rounded-lg p-12 bg-gray-300 bg-opacity-15">
-        <div className="w-16 h-auto">
+      <h3 className="text-lg md:text-xl">{skillSet.description}</h3>
+      <div className="flex w-full gap-6 md:gap-12 flex-wrap mt-10 mb-10 border-2 justify-start items-center rounded-lg p-6 md:p-12 bg-gray-300 bg-opacity-15">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={HtmlSvg}
             alt="html5"
@@ -49,7 +47,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={TailwindSvg}
             alt="tailwind"
@@ -57,7 +55,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={CSS3Svg}
             alt="css3"
@@ -65,7 +63,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={JSSvg}
             alt="javascript"
@@ -73,7 +71,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={ReactSvg}
             alt="reactjs"
@@ -81,7 +79,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-24 h-auto">
+        <div className="w-16 md:w-24 h-auto">
           <Image
             src={NextSvg}
             alt="nextjs"
@@ -89,7 +87,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={JavaSvg}
             alt="java"
@@ -97,7 +95,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={SpringSvg}
             alt="spring boot"
@@ -105,7 +103,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={HibernateSvg}
             alt="hibernate"
@@ -113,7 +111,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={PostgresSvg}
             alt="postgres"
@@ -121,7 +119,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={MongoDbSvg}
             alt="mongodb"
@@ -129,7 +127,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={DockerSvg}
             alt="docker"
@@ -137,7 +135,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={KubernetsSvg}
             alt="kubernetes"
@@ -145,7 +143,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={HelmSvg}
             alt="helm"
@@ -153,7 +151,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={GraphQLSvg}
             alt="graphql"
@@ -161,7 +159,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-48 h-auto">
+        <div className="w-24 md:w-48 h-auto">
           <Image
             src={ApolloSvg}
             alt="Apollo-Link-State"
@@ -169,7 +167,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={AzureSvg}
             alt="azure"
@@ -177,7 +175,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={CsharpSvg}
             alt="c#"
@@ -185,7 +183,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={XamarinSvg}
             alt="xamarin"
@@ -194,7 +192,7 @@ export const TechStackCard = () => {
           />
         </div>
 
-        <div className="w-16 h-auto">
+        <div className="w-8 md:w-16 h-auto">
           <Image
             src={PostmanSvg}
             alt="postman"
@@ -202,7 +200,7 @@ export const TechStackCard = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="w-12 h-auto">
+        <div className="w-6 md:w-12 h-auto">
           <Image
             src={FigmaSvg}
             alt="figma"

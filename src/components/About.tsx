@@ -11,7 +11,7 @@ export const About = () => {
       <div className="grid grid-flow-row w-full gap-6 mt-8 md:grid-flow-col">
         <div
           className="border-2 rounded-xl  bg-gray-600
-          bg-opacity-25 lg:w-64 lg:h-64 sm:h-32 sm:w-32"
+          bg-opacity-25 md:w-48 md:h-48 lg:w-64 lg:h-64 h-48 w-48"
         >
           <Image
             src={ProfilePic}
@@ -19,12 +19,12 @@ export const About = () => {
             style={{ objectFit: "contain" }}
           />
         </div>
-        <div className="flex flex-col w-full space-y-3 justify-center">
-          <h3 className="text-lg">{intro.greeting}</h3>
-          <h2 className="text-2xl font-bold">
+        <div className="flex flex-col w-full lg:space-y-3 justify-center">
+          <h3 className="text-base lg:text-xl">{intro.greeting}</h3>
+          <h2 className="text-lg lg:text-2xl font-bold">
             {intro.firstName} {intro.lastName}
           </h2>
-          <p className="text-lg text-justify">{intro.titleWithDescription}</p>
+          <p className="text-sm md:text-base lg:text-lg text-justify">{intro.titleWithDescription}</p>
         </div>
       </div>
       <div className="w-full  mt-8">
@@ -33,10 +33,10 @@ export const About = () => {
             return (
               <Badge
                 variant={"outline"}
-                className="text-base px-4 hover:bg-gray-900 border-2"
+                className=" px-4 hover:bg-gray-900 border-2"
                 key={`skills_badge_${key}`}
               >
-                {value}
+                <span className="text-[10px] md:text-sm lg:text-base font-normal">{value}</span>
               </Badge>
             );
           })}
@@ -47,11 +47,11 @@ export const About = () => {
           {description.data.map((exp, key) => {
             return (
               <div
-                className="flex flex-col p-4 Justify-center items-center gap-2"
+                className="flex flex-col p-4 Justify-center items-center gap-2 w-full md:w-auto"
                 key={`work_highlights_${key}`}
               >
-                <h2 className="text-xl font-bold">{exp.value}+</h2>
-                <h2 className="text-base  ">{exp.title}</h2>
+                <h2 className="text-xl font-bold text-center">{exp.value}+</h2>
+                <h2 className="text-base text-center ">{exp.title}</h2>
               </div>
             );
           })}
